@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reader</title>
+</head>
+<body>
+<style>
+body, html {
+  background: #777;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+h1 {
+  color: #222;
+  font-family: monospace;
+  position: absolute;
+  font-size: 100px;
+  line-height: 150px;
+  padding-left: 2em;
+  top: 20%;
+  right: 30px;
+  left: 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 20px #000;
+}
+#upus {
+  position: absolute;
+  border: 4px solid red;
+  height: 10px;
+  top: 0;
+  left: 3.4em;
+  width: 0.1ex;
+  background: red;
+  opacity: 0.8;
+  border-radius: 0 0 5px 5px;
+}
+#downus {
+  position: absolute;
+  border: 4px solid red;
+  height: 10px;
+  bottom: 0;
+  left: 3.4em;
+  width: 0.1ex;
+  background: red;
+  opacity: 0.8;
+  border-radius: 5px 5px 0 0;
+}
+
+#left {
+  display: inline-block;
+  text-align: right;
+}
+#righ {
+  display: inline-block;
+  width: 50%;
+}
+#center {
+  display: inline-block;
+  color: red;
+}
+#content {
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  top: 20px;
+  left: 2%;
+  right: 2%;
+  bottom: 20px;
+  width: 96%;
+  box-shadow: 0px 0px 20px #000;
+  border: 4px solid blue;
+}
+#start {
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  right: 50px;
+  top: 50px;
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+</style>
+<h1 id="text" style="display: none;">
+  <div id="upus"></div>
+  <span id="left"></span><span id="center"></span><span id="right"></span>
+  <div id="downus"></div>
+</h1>
+
+<h3 id="meta"></h3>
+
+<textarea id="content">
+Pair programming is a style of programming in which two programmers work side-by-side at one
+computer, continuously collaborating on the same design, algorithm, code or test. As discussed below,
+use of this practice has been demonstrated to improve productivity and quality of software products.
+Additionally, based on a survey(Williams 1999) of pair programmers (hereafter referred to as âthe pair
+programming survey"), 100% agreed that they had more confidence in their solution when pair
+programming than when they program alone. Likewise, 96% agreed that they enjoy their job more than
+when programming alone.
+
+However, most programmers are long conditioned to performing solitary work and often resist the
+transition to pair programming. Ultimately, most triumphantly make this transition. This purpose of this
+paper is to aid programmers in becoming effective pair programmers. The transition and on-going
+success as a pair programmer often involves practicing everyday civility, as written about in Robert
+Fulghumâs poem above. Each of the poem lines (some adapted with poetic license) will be explored for
+the inherent lessons related to successful pair programming.
+
+Anecdotal and initial statistical evidence indicates pair programming is highly beneficial. Extreme
+Programming (XP), an emerging software development methodology, attributes great success to the use
+of âpair programming.â XP was developed initially by Smalltalk code developer and consultant Kent Beck
+with colleagues Ward Cunningham and Ron Jeffries. The evidence of XPâs success is highly anecdotal,
+but so impressive that it has aroused the curiosity of many highly-respected software engineering
+researchers and consultants. The largest example of its accomplishment is the sizable Chrysler
+Comprehensive Compensation system launched in May 1997. After finding significant, initial
+development problems, Beck and Jeffries restarted this development using XP principles. The payroll
+system pays some 10,000 monthly-paid employees and has 2,000 classes and 30,000 methods,
+(Anderson 1998), went into production almost on schedule, and is still operational today. Additionally,
+programmers at Ford Motor Company, spent four unsuccessful years trying to build the Vehicle Cost and
+Profit System (VCAPS) using a traditional waterfall methodology. The XP developers successfully
+implemented that system in less than a year using Extreme Programming (Beck 1999).
+XP attributes great success to the use of âpair programming.â All production code is written with a
+partner. XP advocates pair programming with such fervor that even prototyping done solo is scrapped
+and re-written with a partner. One key element is that while working in pairs a continuous code review is
+performed, noting that it is amazing how many obvious but unnoticed defects become noticed by another
+
+person watching over their shoulder. Results (Beck 1999) demonstrate that the two programmers work
+together more than twice as fast and think of more than twice as many solutions to a problem as two
+working alone, while attaining higher defect prevention and defect removal leading to a higher quality
+product.
+Two other studies support the use of pair programming. Larry Constantine, a programmer, consultant,
+and magazine columnist reports on observing âDynamic Duosâ during a visit to P. J. Plaugherâs software
+company, Whitesmiths, Ltd, providing anecdotal support for collaborative programming. He immediately
+noticed that at each terminal were two programmers working on the same code. He reports, âHaving
+adopted this approach, they were delivering finished and tested code faster than ever . . . The code that
+came out the back of the two programmer terminals was nearly 100% bug free . . . it was better code,
+tighter and more efficient, having benefited from the thinking of two bright minds and the steady dialogue
+between two trusted terminal-mates . . . Two programmers in tandem is not redundancy; itâs a direct route
+to greater efficiency and better quality.â(Constantine 1995)
+An experiment by Temple University Professor Nosek studied 15 full-time, experienced programmers
+working for 45 minutes on a challenging problem, important to their organization, in their own
+environment, and with their own equipment. Five worked individually, ten worked collaboratively in five
+pairs. Conditions and materials used were the same for both the experimental (team) and control
+(individual) groups. This study provided statistically significant results, using a two-sided t-test. âTo the
+surprise of the managers and participants, all the teams outperformed the individual programmers,
+enjoyed the problem-solving process more, and had greater confidence in their solutions.â The groups
+completed the task 40% more quickly and effectively by producing better algorithms and code in less
+time. The majority of the programmers were skeptical of the value of collaboration in working on the
+same problem and thought it would not be an enjoyable process. However, results show collaboration
+improved both their performance and their enjoyment of the problem solving process (Nosek 1998).
+
+The respondents of the pair programming survey gave overwhelming support for the technique. Says
+one: âI strongly feel pair programming is the primary reason our team has been successful. It has given
+us a very high level of code quality (almost to the point of zero defects). The only code we have ever had
+errors in was code that wasnât pair programmed . . . we should really question a situation where it isnât
+utilized.â Given these successes, let's review some principles of pair programming in the context of
+Fulghumâs poem.
+
+In pair programming, two programmers are assigned to jointly produce one artifact (design, algorithm,
+code, etc.). The two programmers are like a coherent, intelligent organism working with one mind,
+responsible for every aspect of this artifact. One person is typing or writing, the other is continually
+reviewing the work. But, both are equal participants in the process. It is not acceptable to say or think
+things such as, âYou made an error in your design.â or âThat defect was from your part.â Instead, âWe
+screwed up the design.â or, better yet, âWe just got through test with no defects!â Both partners own
+everything.
+</textarea>
+<button id="start" onclick="start(); this.style.display='none'">Start</button>
+
+<script>
+var speed = 130;
+var readerNode = document.getElementById('text')
+var left = document.getElementById('left')
+var center = document.getElementById('center')
+var right = document.getElementById('right')
+var metaNode = document.getElementById('meta')
+var i = 0
+var words = null
+
+function speak(){
+  if(i >= words.length){
+    i = 0;
+  }
+  var word = words[i++].replace(/[_.,;]/,' ')
+
+  left.innerText = word.substring(0, 2 )
+  center.innerText = word.substring(2 , 3)
+  right.innerText = word.substring(3 , word.length)
+
+  metaNode.innerHTML = ''
+  setTimeout(speak, speed + (word.length * 20))
+}
+function start(){
+  var contentNode = document.getElementById('content')
+  words = contentNode.value.split(/\s+/)
+  contentNode.style.display = 'none';
+  readerNode.style.display = 'block';
+  speak()
+}
+</script>
+</body>
+</html>
